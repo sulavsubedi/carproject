@@ -27,11 +27,8 @@ header {
     width: 100px;
     margin-top: 20px;
 }
- {
-    width: 100;
-    color: #fff;
-    position: fixed;
-}
+ 
+
 
 nav ul {
     list-style: none;
@@ -109,4 +106,67 @@ nav ul li a.current {
     text-shadow: #4CAF50;
     text-align: center;
 
+}
+
+.car-gallery {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.car-item {
+    width: 30%; /* Adjust based on the number of items per row you prefer */
+    margin: 15px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.car-item:hover {
+    transform: translateY(-10px); /* Slight lift effect on hover */
+}
+ 
+.car-image {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.car-info {
+    padding: 10px;
+    background-color: #333; /* Dark background for text visibility */
+    color: #fff;
+} 
+
+
+.car-name, .car-year, .car-price {
+    margin: 5px 0;
+}
+
+.car-name {
+    font-size: 20px;
+}
+
+.car-year, .car-price {
+    font-size: 16px;
+}
+
+.buy-now {
+    display: inline-block; /* Ensures proper button formatting */
+    padding: 10px 20px;
+    background-color: #4CAF50; /* Green background */
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    text-align: center;
+    text-decoration: none; /* Removes underline from links */
+    margin-top: 10px;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition for hover effects */
+    border-radius: 5px; /* Rounded corners */
+}
+
+.buy-now:hover {
+    background-color: #367c39; /* Darker shade of green on hover */
+    transform: scale(1.05); /* Slight increase in size */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Adds depth */
 }
