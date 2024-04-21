@@ -1,10 +1,12 @@
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
+    margin: 0;
+    padding: 0;
 }
 
 header {
-    background: #333;
+    background: #eda2a2;
     color: #fff;
     padding: 10px 20px;
     text-align: center;
@@ -24,6 +26,11 @@ header {
 .logo {
     width: 100px;
     margin-top: 20px;
+}
+ {
+    width: 100;
+    color: #fff;
+    position: fixed;
 }
 
 nav ul {
@@ -47,6 +54,10 @@ nav ul li a {
 .featured-cars {
     text-align: center;
     padding: 20px;
+    background-color: lightblue;
+    text-decoration: solid;
+    color: white;
+
 }
 
 .featured-image {
@@ -90,3 +101,12 @@ nav ul li a.current {
     background-color: #ccc;
 }
 
+.intro{
+    padding: 30px;
+    color: white;
+    background-color: black;
+    text-decoration: solid;
+    text-shadow: #4CAF50;
+    text-align: center;
+
+}
