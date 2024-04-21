@@ -10,18 +10,9 @@ header {
     text-align: center;
     position: relative;
     overflow: hidden;
-    height: 300px;
+    height: 500px;
 }
 
-.headerVideo {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Ensure the video covers the full area of the header, may cut off some parts of the video */
-    z-index: -1; /* Ensures the video stays behind the text and logo */
-}
 
 .header-content {
     position: relative;
@@ -99,8 +90,3 @@ nav ul li a.current {
     background-color: #ccc;
 }
 
-.header-content h1, .header-content nav {
-    background: rgba(0, 0, 0, 0.5); /* Adding a semi-transparent background to the text */
-    display: inline-block; /* Adjust layout to fit content */
-    padding: 10px 20px; /* Padding for better spacing */
-}
