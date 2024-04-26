@@ -1,0 +1,37 @@
+header {
+    background: #eda2a2;
+    color: #fff;
+    padding: 10px 20px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    height: 500px;
+}
+
+
+.header-content {
+    position: relative;
+    z-index: 10; /* Ensures content is above the video */
+    padding: 20px;
+    text-align: center; /* Center the text and logo if desired */
+}
+
+.logo {
+    width: 100px;
+    margin-top: 20px;
+}
+ 
+
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    align-items: center;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 10px;
+    vertical-align: middle; 
+}
+
