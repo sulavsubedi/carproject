@@ -40,7 +40,7 @@ nav ul li {
 
 .briefing{
     padding: 30px;
-    background-color: darkgray;
+    background-color: whitesmoke;
     color: red;
     border-radius: 20px;
     text-decoration: solid;
@@ -52,7 +52,17 @@ nav ul li {
     color: white;
 
 }
-.h3{
+h3{
     color: black;
+    text-align: center;
+    text-transform: capitalize;
+    text-decoration: solid;
+    padding: 20px;
+    background-color: lightblue;
+    border: #eda2a2;
+    border-radius: 30px;
+    box-shadow: #eda2a2;
+    text-shadow: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 
 }
