@@ -40,8 +40,19 @@ nav ul li {
 
 .briefing{
     padding: 30px;
-    /*background-image: url(car1.jpg);*/
+    background-color: darkgray;
     color: red;
     border-radius: 20px;
+    text-decoration: solid;
+    
+
+
+}
+.briefing .messsage{
+    color: white;
+
+}
+.h3{
+    color: black;
 
 }
