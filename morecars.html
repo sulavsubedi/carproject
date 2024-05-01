@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>More Cars </title>
+    <script type="text/javascript" src="js/scripts.js"></script>
+    <link rel="stylesheet" href="css/morecars.css">
+</head>
+<body>
+    <h2 style="margin: 10px; text-align: center;">Find The Perfect car for you </h2>
+	<div id="filter_bttn">
+		<button class="filter_bttn" car_category="electric">Electric</button>
+		<button class="filter_bttn" car_category="luxury">Luxury</button>
+		<button class="filter_bttn" car_category="suv">SUV</button>
+		<button class="filter_bttn" car_category="crossover">Crossover</button>
+		<button class="filter_bttn" car_category="hybrid">Hybrid</button>
+	</div>
+	<div class="product-wrapper">
+		<div class="section">
+            <div class="box" car_category="electric">
+                <div class="card">
+                    <img src="carsales/teslamodel3.jpg" alt="Tesla Model 3">
+
+                    <div class="description">
+                        <p>Tesla Model 3 </p>
+                        <p>price: <span>$94,500</span></p>
+                        <button class="button">Buy Now</button>
+                    </div>
+                </div>
+            
+            </div>
+	    </div>
+        <div class="section">
+            <div class="box" car_category="electric">
+                <div class="card">
+                    <img src="carsales/ioniq5.jpg" alt="Ioniq 5">
+
+                    <div class="description">
+                        <p>Hyundai EV </p>
+                        <p>price: <span>$84,500</span></p>
+                        <button class="button">Buy Now</button>
+                    </div>
+                </div>
+            
+            </div>
+	    </div>
+	</div>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+    const bttn=document.querySelectorAll('.button') //buy button
+    
+        // Get all category filter buttons and car items
+    const filterButtons = document.querySelectorAll('.filter_bttn');
+    const carItems = document.querySelectorAll('.box');
+    
+    // Initialize with the 'electric' category active
+    filterButtons.forEach(button => {
+        const category = button.getAttribute('car_category');
+        if (category === 'electric') {
+            button.classList.add('active'); // Set the initial active button
+            filterCars(category); // Show electric cars by default
+        }
+        
+        // Add click event to toggle active background color and filter items
+        button.addEventListener('click', () => {
+            // Remove 'active' class from all buttons
+            filterButtons.forEach(btn => {
+                btn.classList.remove('active');
+            });
+            
+            // Add 'active' class to the clicked button
+            button.classList.add('active');
+    
+            // Filter cars based on the selected category
+            filterCars(category);
+        });
+    });
+    
+    function filterCars(category) {
+        carItems.forEach(item => {
+            const itemCategory = item.getAttribute('car_category');
+            if (category === 'all' || category === itemCategory) {
+                item.style.display = 'block'; // Show items matching the category
+            } else {
+                item.style.display = 'none'; // Hide other categories
+            }
+        });
+    }
+    
+    bttn.addEventListener('click',()=> {
+        alert('Item bought successfully');
+    });
+    </script>
+
+
+
+
+    
+</body>
+</html>
