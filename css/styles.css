@@ -226,3 +226,10 @@ nav ul li a.current {
     text-decoration: solid;
     font-size: large;
 }
+.footer-container{
+    background-color: #eda2a2;
+    padding: 30px;
+    border-radius: 20px;
+    border: 20px;
+
+}
