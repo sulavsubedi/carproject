@@ -9,21 +9,21 @@
 <body>
     <header>
         <div class="header-content">
-            <img src="images/logo.png" alt="Online Car Sale Logo" class="logo">
+            <img src="imagess/logo.png" alt="Online Car Sale Logo" class="logo">
             <h1>Welcome to Crown Marketplace</h1>
             <nav>
                
                 <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="contactus.html">About Us</a></li>
+                    <li><a href="./index.html">Home</a></li>
+                    <li><a href="./contactus.html">About Us</a></li>
                     <li>
                         <form action="/search" method="GET" class="search-form">
                             <input type="text" name="search" placeholder="Search cars..." required>
                             <button type="submit">Search</button>
                         </form>
                     </li>
-                    <li><a href="seller-registration.html">Seller Registration</a></li>
-                    <li><a href="login.html">Login</a></li>
+                    <li><a href="./seller.html">Seller Registration</a></li>
+                    <li><a href="./login.html">Login</a></li>
                 </ul>    
             </nav>
         </div>
@@ -44,6 +44,20 @@
             </ul>
         </div>
 
+    </div>
+    <div class="car-seller-container">
+        <form>
+        <label for="name">Name:</label>
+        <input class="color_changer" type="text" name="name" id="name" required>
+        <br>
+        <label for="email">Email:</label>
+        <input class="color_changer" type="email" name="email" id="email" required>
+        <br>
+        <label for="message">Message:</label>
+        <textarea class="color_changer" name="message" id="message" required></textarea>
+        <br>
+        <input class="button_color" type="submit" value="Submit">
+        </form>
     </div>
     
     

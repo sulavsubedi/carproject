@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seller Registration </title>
+    <link rel="stylesheet" href="../Css/styles.css">
+    <style type="text/css">
+        #loginSection,#addCarSection{
+            margin-top: 50px;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+
+        }
+        #loginForm,#addCarForm{
+            padding: 50px;
+            box-shadow: 5px 3px 3px 3px rgba(0, 0, 0, 0.3);
+        }
+        #loginForm input,#addCarForm input{
+            padding: 12px;
+            margin-bottom: 10px;
+            border: none;
+            box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
+            border-radius: 5px;
+        }
+    </style>
+
+<header>
+    <div class="header-content">
+        <img src="./imagess/logo.png" alt="Online Car Sale Logo" class="logo">
+        <h1>Welcome to Crown Marketplace</h1>
+        <nav>
+           
+            <ul>
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./contactus.html">About Us</a></li>
+                <li>
+                    <form action="/search" method="GET" class="search-form">
+                        <input type="text" name="search" placeholder="Search cars..." required>
+                        <button type="submit">Search</button>
+                    </form>
+                </li>
+                <li><a href="./seller.html">Seller Registration</a></li>
+                <li><a href="./login.html">Login</a></li>
+            </ul>    
+        </nav>
+    </div>
+</header>
+</head>
+<body>
+
+   
+    <main>
+        <section id="loginSection">
+            <form id="loginForm" action="#" method="POST" onsubmit="return validateLoginForm()">
+                <h2>Login</h2><br>
+                <label for="loginUsername">Username:</label>
+                <input class="color_changer" type="text" id="loginUsername" name="loginUsername" required>
+                <br>
+                <label for="loginPassword">Password:</label>
+                <input class="color_changer" type="password" id="loginPassword" name="loginPassword" required>
+
+                <button type="submit" class="button">Login</button>
+            </form>
+        </section>
+        <section id="addCarSection">
+            <form id="addCarForm" action="#" method="POST" onsubmit="return validateAddCarForm()">
+                <h2>Add Car</h2><br>
+                <label for="make">Make:</label>
+                <input class="color_changer" type="text" id="make" name="make" required><br>
+
+                <label for="model">Model:</label>
+                <input class="color_changer" type="text" id="model" name="model" required><br>
+
+                <label for="year">Year:</label>
+                <input class="color_changer" type="number" id="year" name="year" required><br>
+
+                <label for="mileage">Mileage:</label>
+                <input class="color_changer" type="number" id="mileage" name="mileage" required><br>
+
+                <label for="location">Location:</label>
+                <input class="color_changer" type="text" id="location" name="location" required><br>
+
+                <label for="price">Price:</label>
+                <input class="color_changer" type="number" id="price" name="price" required><br>
+
+                <button type="submit" class="button">Add Car</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <div class = footer-container>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+            </div>
+            <p>1/55 Carrington Avenue,hurstville - Sydney 2220 - Australia</p>
+            <div class="call-mail">
+                <a href=""><p><i class="fas fa-phone"></i> +61 0451 868 703</p></a>
+                <a href=""><p><i class="fas fa-envelope"></i> devkotapallabidev2020@gmail.com</p></a>
+            </div>
+            <div class="circle-container">
+                <div class="footer-circle"></div>
+            </div>
+        </div>
+    </footer>
+    
+
+<script>
+    
+function validateLoginForm() {
+    const loginUsername = document.getElementById('loginUsername').value;
+    const loginPassword = document.getElementById('loginPassword').value;
+
+    if (loginUsername === '' || loginPassword === '') {
+        alert('Please fill in all fields for login.');
+        return false;
+    }
+
+    return true;
+}
+
+// Form validation for add car
+function validateAddCarForm() {
+    const make = document.getElementById('make').value;
+    const model = document.getElementById('model').value;
+    const year = document.getElementById('year').value;
+    const mileage = document.getElementById('mileage').value;
+    const location = document.getElementById('location').value;
+    const price = document.getElementById('price').value;
+
+    if (make === '' || model === '' || year === '' || mileage === '' || location === '' || price === '') {
+        alert('Please fill in all fields for adding a car.');
+        return false;
+    }
+
+    return true;
+}
+</script>
+<script type="text/javascript" src="script.js"></script>
+</body>
+</html>

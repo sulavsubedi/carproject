@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Login </title>
+
+	<style type="text/css">
+		.register-container{
+			margin-top: 50px;
+			height: 80vh;
+			justify-content: center;
+			align-items: center;
+			display: flex;
+		}
+		#registrationForm{
+			padding: 80px;
+			box-shadow: 5px 3px 3px 5px rgba(26, 4, 194, 0.3);
+		}
+		#registrationForm input{
+			padding: 12px;
+			margin-bottom: 10px;
+			border: none;
+			box-shadow: 2px 2px 2px rgba(235, 7, 7, 0.3);
+			border-radius: 5px;
+		}
+	</style>
+	<link rel="stylesheet" type="text/css" href="../Css/styles.css">
+</head>
+
+<header>
+    <div class="header-content">
+        <img src="./imagess/logo.png" alt="Online Car Sale Logo" class="logo">
+        <h1>Welcome to Crown Marketplace</h1>
+        <nav>
+           
+            <ul>
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./contactus.html">About Us</a></li>
+                <li>
+                    <form action="/search" method="GET" class="search-form">
+                        <input type="text" name="search" placeholder="Search cars..." required>
+                        <button type="submit">Search</button>
+                    </form>
+                </li>
+                <li><a href="./seller.html">Seller Registration</a></li>
+                <li><a href="./login.html">Login</a></li>
+            </ul>    
+        </nav>
+    </div>
+</header>
+
+
+<body>
+<div class="container">	
+	
+	<div class="register-container">
+
+		<form id="registrationForm">
+            <label for="name">Name:</label><br>
+            <input class="color_changer" type="text" id="name" name="name" required>
+            <br>
+            <label for="address">Address:</label><br>
+            <input class="color_changer" type="text" id="address" name="address" required>
+			<br>           	
+            <label for="phone">Phone Number:</label><br>
+            <input class="color_changer" type="tel" id="phone" name="phone" required>
+			<br>	
+            <label for="email">Email Address:</label><br>
+            <input class="color_changer" type="email" id="email" name="email" required>
+			<br>
+            <label for="username">Username:</label><br>
+            <input class="color_changer" type="text" id="username" name="username" required pattern="[a-zA-Z]+" title="Username should only contain alphabets">
+			<br>
+            <label for="password">Password:</label><br>
+            <input class="color_changer" type="password" id="password" name="password" required minlength="6" maxlength="10" pattern="^(?=.*[a-zA-Z])(?=.*\d)(?=.*[@#$?]).{6,10}$" title="Password must be 6-10 characters long and contain at least one letter, one number, and one of the following special characters: @, #, $, ?">
+            <br>
+            <button type="submit" class="button">Register</button>
+        </form>
+	</div>
+</div>
+<script>
+function validateAddCarForm() {
+    const name = document.getElementById('name').value;
+    const address = document.getElementById('address').value;
+    const phone = document.getElementById('phone').value;
+    const email = document.getElementById('email').value;
+    const username = document.getElementById('username').value;
+    const password = document.getElementById('password').value;
+
+    if (name === '' || address === '' || phone === '' || email === '' || username === '' || password === '') {
+        alert('Please fill in all fields for registering car sale.');
+        return false;
+    }
+
+    return true;
+}
+
+
+</script>
+<script type="text/javascript" src="./js/morecars.js"></script>
+</body>
+</html>
