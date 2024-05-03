@@ -182,3 +182,34 @@ nav ul li a.current {
     text-decoration: solid;
     
 }
+
+.filter_button{
+	margin: 30px;
+	justify-content: center;
+	text-align: center;
+    padding: 10px;
+    border: 1px solid;
+    border-radius: 9px;
+    text-align: center;
+
+}
+.button{  /* -- */
+	margin-top: 5px;
+	margin-bottom: 5px;
+	border-radius: 3px;
+	background-color: lightblue;
+	border-top: none;
+	padding: 4px;
+	box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.1);
+	align-items: center;
+	transition: 0.5s;
+    text-align: center;
+
+}
+#morecars{
+    padding: 50px;
+    text-align: center;
+    background-color: #eda2a2;
+
+
+}
